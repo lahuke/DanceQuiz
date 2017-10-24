@@ -77,6 +77,24 @@ function checkAnswer(question, answer){
 		$('#incorrectq5').css({'display':'inline-block'});
 	}
 	document.getElementById("correctAnswers").innerText = score;
+	assignPosition(score);
+};
+//gives dance position label at end//
+function assignPosition(){
+	if (score === 0){
+		document.getElementById("position").innerHTML = "You are a rookie. Keep the dancing to very dark rooms."
+	}
+	else if (score === 1){
+		document.getElementById("position").innerHTML = "You are a novice. Take a few more dance classes and give it another go."
+		console.log('working position');
+	}
+	else if (score === 5){
+		document.getElementById("position").innerHTML = "You're a professional dancer!"
+	}
+	else {
+		document.getElementById("position").innerHTML = "You almost had us fooled. Stick to the ballet barre and you'll be a professional before you know it."
+	}
+
 };
 
 $('#submitButton').on('click', function(){
