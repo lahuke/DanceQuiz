@@ -1,0 +1,185 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Dancer Quiz</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=News+Cycle:700" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+	</head>
+	<body>
+		<div id="intro">
+			<h1 class="intro">Are you a true dancer?</h1>
+			<img id="introImage" src="images/ModernDance.jpg" style="width:100%">
+			<h2> Take the quiz to find out!</h2>
+			<button id="refresh" onClick="q1appear()">Take the Quiz!</button>
+		</div>
+		<div id="header">
+			<h1>Are you a true dancer?</h1>
+		</div>
+		<div id="status">
+			<h1 id="firstStatus">Question 1/5</h1>
+			<h1 id="secondStatus">Question 2/5</h1>
+			<h1 id="thirdStatus">Question 3/5</h1>
+			<h1 id="fourthStatus">Question 4/5</h1>
+			<h1 id="fifthStatus">Question 5/5</h1>
+		</div>
+		
+		<div id=images>	
+			<img id="image1" src="images/tendu.jpg" style="max-width:100%">
+			<img id="image2" src="images/DanceTerms.jpg" style="max-width:100%">
+			<img id="image3" src="images/scarf.jpg" style="max-width:100%">
+			<img id="image4" src="images/BobFosse.jpg" style="max-width:100%">
+			<img id="image5" src="images/Baryshnikov.jpg" style="max-width:100%">
+		</div>
+
+		<div id="Questions">
+			<h2 id="firstQuestion">What does the word "tendu" mean?</h2>
+			<h2 id="secondQuestion">Which of these is not a ballet term?</h2>
+			<h2 id="thirdQuestion">Which famous dancer was killed by her scarf?</h2>
+			<h2 id="fourthQuestion">Which of the following was not a work choreographed by Bob Fosse?</h2>
+			<h2 id="fifthQuestion">Famous dancer Mikhail Baryshnikov appeared in which popular television show?</h2>
+		</div>
+		
+		<div class="answers" id="q1">
+			<div class="answer" name="touch">
+				<a href="#"><h3>To touch</h3></a> 
+			</div>	
+			<div class="answer" name='stretch'>
+				<a href="#"><h3>To stretch</h3></a> 	<!--correct answer-->
+			</div>	
+			<div class="answer" name='taunt'>
+				<a href="#"><h3>To taunt</h3></a> 
+			</div>	
+			<div class="answer" name='jump'>
+				<a href="#"><h3>To jump</h3></a>
+			</div>		 
+		</div>
+
+		<div class="answers" id="q2">
+			<div class="answer" name='plie'>
+				<a href="#"><h3>plié</h3></a>
+			</div>  
+			<div class="answer" name='ronde'>
+				<a href="#"><h3>ronde jamb</h3></a>
+			</div> 	
+			<div class="answer" name='montagne'>
+				<a href="#"><h3>montagne</h3></a>
+			</div> 	<!-- correct answer-->
+			<div class="answer" name='grand'>
+				<a href="#"><h3>grand jeté</h3></a>
+			</div> 
+		</div>
+
+		<div class="answers" id="q3">
+			<div class="answer" name='martha'>
+				<a href="#"><h3>Martha Graham</h3></a>
+			</div>  
+			<div class="answer" name='isadora'>
+				<a href="#"><h3>Isadora Duncan</h3></a>
+			</div> 		<!-- correct answer-->
+			<div class="answer" name='katherine'>
+				<a href="#"><h3>Katherine Dunham</h3></a>
+			</div>	
+			<div class="answer" name='tricia'>
+				<a href="#"><h3>Tricia Brown</h3></a>
+			</div>
+		</div>
+
+		<div class="answers" id="q4">
+			<div class="answer" name='chorus'>
+				<a href="#"><h3>A Chorus Line</h3></a>  	<!-- correct answer-->
+			</div>	
+			<div class="answer" name='pippin'>
+				<a href="#"><h3>Pippin</h3>	</a> 	
+			</div>	
+			<div class="answer" name='pajama'>
+				<a href="#"><h3>Pajama Game</h3></a> 	
+			</div>	
+			<div class="answer" name='cabaret'>
+				<a href="#"><h3>Cabaret</h3></a>
+			</div> 
+		</div>
+
+		<div class="answers" id="q5">
+			<div class="answer" name='friends'>
+				<a href="#"><h3>Friends</h3></a> 
+			</div>	
+			<div class="answer" name='modern'>
+				<a href="#"><h3>Modern Family</h3></a> 		
+			</div>	
+			<div class="answer" name='white'>
+				<a href="#"><h3>White Collar</h3></a>
+			</div>	
+			<div class="answer" name='sex'>
+					<a href="#"><h3>Sex and the City</h3></a> 	<!-- correct answer-->
+			</div>	
+		</div>
+	
+		<div id="submitButton">
+			<button type="submit">Submit</button>
+		</div>
+
+		<div class="answerPopUp" div id="correctq1">	
+				<h1>Correct!</h1>
+				<p>"Tendu" means "to stretch."</p>
+				<button type="submit" id="buttonq1">Continue</button>
+		</div>
+		<div class="answerPopUp" id="incorrectq1">
+				<h1>Incorrect!</h1>
+				<p>"Tendu" means "to stretch."</p>
+				<button type="submit" id="buttonq1i">Continue</button>
+		</div>
+
+		<div class="answerPopUp" div id="correctq2">	
+				<h1>Correct!</h1>
+				<p>"Montagne" means "mountain" and is not a dance term.</p>
+				<button type="submit" id="buttonq2">Continue</button>
+		</div>	
+		<div class="answerPopUp" id="incorrectq2">
+				<h1>Incorrect!</h1>
+				<p>"Montagne" means "mountain" and is not a dance term.</p>
+				<button type="submit" id="buttonq2i">Continue</button>
+		</div>
+
+		<div class="answerPopUp" id="correctq3">
+				<h1>Correct!</h1>
+				<p>Isadora Duncan was killed by her scarf while driving in a car.</p>
+				<button type="submit" id="buttonq3">Continue</button>
+		</div>
+		<div class="answerPopUp" id="incorrectq3">
+				<h1>Incorrect!</h1>
+				<p>Isadora Duncan was killed by her scarf while driving in a car.</p>
+				<button type="submit" id="buttonq3i">Continue</button>
+		</div>
+		
+		<div class="answerPopUp" id="correctq4">
+				<h1>Correct!</h1>
+				<p><i>A Chorus Line</i> was choreographed by Michael Bennett.</p>
+				<button type="submit" id="buttonq4">Continue</button>
+		</div>
+		<div class="answerPopUp" id="incorrectq4">
+				<h1>Incorrect!</h1>
+				<p><i>A Chorus Line</i> was choreographed by Michael Bennett.</p>
+				<button type="submit" id="buttonq4i">Continue</button>
+		</div>
+		<div class="answerPopUp" id="correctq5">
+				<h1>Correct!</h1>
+				<p>Baryshnikov appears as Aleksandr Petrovsky in Sex and the City.</p>
+				<button type="submit" id="buttonq5">Continue</button>
+		</div>
+		<div class="answerPopUp" id="incorrectq5">
+				<h1>Incorrect!</h1>
+				<p>Baryshnikov appears as Aleksandr Petrovsky in Sex and the City.</p>
+				<button type="submit" id="buttonq5i">Continue</button>
+		</div>
+
+		<div id="endPage">
+			<h1>Congrats on completing the Dancer Quiz! <br>You scored <span id='correctAnswers'>0</span> out of 5.</h1>
+			<button id="refresh" onClick="reloadPage()">Try Again!</button>
+		</div>
+	</body>
+		<script type="text/javascript" src="js/app.js"></script>
+	</html>
